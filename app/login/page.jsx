@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { signIn } from "next-auth/react"; // 1. NextAuth ka signIn function import karein
-import Navbar from "../components/Navbar";
+
 
 export default function LoginPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,8 +23,6 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 to-rose-50 overflow-x-hidden">
-      <Navbar />
-
       <div className="flex items-center justify-center p-4 sm:p-8 md:p-12 lg:p-16">
         <div className={`w-full max-w-lg bg-[#E597A8] rounded-[30px] md:rounded-[40px] shadow-2xl overflow-hidden relative p-8 md:p-12 transform transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           
